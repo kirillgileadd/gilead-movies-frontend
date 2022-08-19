@@ -9,11 +9,11 @@ const nextConfig = {
 		return [
 			{
 				source: '/api/:path*',
-				destination: `https://gilead-movies-backend.herokuapp.com/api/:path*`,
+				destination: `${process.env.APP_URL}/api/:path*`,
 			},
 			{
 				source: '/uploads/:path*',
-				destination: `https://gilead-movies-backend.herokuapp.com/uploads/:path*`,
+				destination: `${process.env.APP_URL}/uploads/:path*`,
 			},
 		]
 	},
