@@ -1,0 +1,17 @@
+.auth__box {
+	@apply m-auto w-96 p-6 bg-gray-200 rounded-3xl;
+	> h3 {
+		@apply text-center mb-6;
+	}
+}
+
+.toggle__auth {
+	@apply flex items-center justify-between gap-2;
+	> p {
+		@apply select-none;
+	}
+
+	> p > span {
+		@apply text-primary underline block cursor-pointer;
+	}
+}

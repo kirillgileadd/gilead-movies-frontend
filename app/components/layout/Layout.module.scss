@@ -1,0 +1,22 @@
+$navigationSize: 22%;
+
+.layout {
+	@apply relative;
+
+	> div:first-child {
+		@apply fixed top-0 bottom-0 overflow-y-auto border-r-2 border-gray-200;
+		width: $navigationSize;
+		max-width: 350px;
+		background: var(--dark);
+	}
+
+	.main {
+		@apply min-h-screen p-layout;
+		margin-left: $navigationSize;
+		background: var(--dark);
+
+		@media (min-width: 1920px) {
+			margin-left: 350px;
+		}
+	}
+}

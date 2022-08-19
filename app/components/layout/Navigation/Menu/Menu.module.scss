@@ -1,0 +1,35 @@
+.menu {
+	@apply mb-6;
+	> h6 {
+		@apply text-gray-500 mb-3 text-xs uppercase font-bold;
+	}
+
+	.lists {
+		> ul {
+			> li {
+				@apply pl-layout py-3 relative after:content-[''] after:ml-0.5 after:absolute after:-left-0.5 after:top-0 after:h-full after:w-1 after:rounded-md;
+				> a {
+					@apply flex items-center;
+					> p {
+						@apply text-gray-500 ml-3;
+					}
+
+					> svg {
+						@apply fill-gray-500 w-5 h-5;
+					}
+				}
+
+				&.active {
+					@apply after:bg-primary bg-white;
+					> a > p {
+						@apply text-gray-800;
+					}
+
+					> a > svg {
+						@apply fill-gray-800;
+					}
+				}
+			}
+		}
+	}
+}

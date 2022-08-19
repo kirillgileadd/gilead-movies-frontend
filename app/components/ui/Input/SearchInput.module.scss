@@ -1,0 +1,22 @@
+.input {
+	@apply relative basis-1/2 items-center flex rounded-3xl border-2 border-gray-500 py-1.5 px-4;
+
+	> svg {
+		@apply h-6 w-6 fill-gray-500 mr-2;
+	}
+
+	> input {
+		@apply bg-transparent outline-0 w-full shadow-none outline-none border-none p-0;
+		&:focus {
+			@apply shadow-none outline-none border-none ring-0;
+		}
+
+		&::placeholder {
+			@apply text-gray-500;
+		}
+	}
+
+	&:focus-within {
+		@apply grow border-primary;
+	}
+}
