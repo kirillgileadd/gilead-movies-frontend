@@ -1,0 +1,6 @@
+.inner {
+	@apply mt-6 mx-auto p-24 bg-gray-200 rounded-3xl;
+	> p {
+		@apply mx-auto text-center text-5xl text-gray-800 font-extrabold;
+	}
+}

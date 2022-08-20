@@ -7,7 +7,7 @@
 	.lists {
 		> ul {
 			> li {
-				@apply pl-layout py-3 relative after:content-[''] after:ml-0.5 after:absolute after:-left-0.5 after:top-0 after:h-full after:w-1 after:rounded-md;
+				@apply pl-layout mr-12 rounded-r-3xl py-3 relative after:content-[''] after:ml-0.5 after:absolute after:-left-0.5 after:top-0 after:h-full after:w-1 after:rounded-md;
 				> a {
 					@apply flex items-center;
 					> p {

@@ -37,6 +37,7 @@ module.exports = {
 				layout: '2rem',
 			},
 			fontSize: {
+				'2md': '1.12rem',
 				'2lg': '1.38rem',
 			},
 			borderRadius: {

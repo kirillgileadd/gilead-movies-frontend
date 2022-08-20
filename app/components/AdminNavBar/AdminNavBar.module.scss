@@ -1,0 +1,14 @@
+.navbar {
+	@apply mb-8 w-fit;
+	.list {
+		@apply flex bg-gray-200 rounded-3xl;
+	}
+
+	.item {
+		@apply m-1.5 p-2.5 mx-2 rounded-3xl;
+
+		&.active {
+			@apply bg-white text-primary;
+		}
+	}
+}
