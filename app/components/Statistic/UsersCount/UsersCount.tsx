@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { useQuery } from 'react-query'
 
+import MaterialIcon from '@/ui/MaterialIcon'
 import Subtitle from '@/ui/Subtitle/Subtitle'
 
 import AdminService from '@/services/AdminService'
@@ -18,6 +19,7 @@ const UsersCount: FC = () => {
 			<Subtitle>Пользователи</Subtitle>
 			<div className={styles.inner}>
 				<p>{data}</p>
+				<MaterialIcon icon={'MdSupervisedUserCircle'} />
 			</div>
 		</div>
 	)

@@ -9,7 +9,7 @@ import { IMovie } from '../../../types/movie.types'
 const PopularMoviesList: FC<{ movies: IMovie[] }> = ({ movies }) => {
 	return (
 		<ul className={styles.list}>
-			{movies.map((movie) => (
+			{movies.slice(0, 1).map((movie) => (
 				<PopularMovieItem {...movie} key={movie._id} />
 			))}
 		</ul>

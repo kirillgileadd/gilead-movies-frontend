@@ -1,0 +1,21 @@
+.random__movie {
+	@apply fixed flex left-0 bottom-6 z-3 text-center flex-col justify-center items-center mx-layout mt-auto bg-gray-200 p-4 pt-8 rounded-3xl;
+	> div {
+		@apply bg-gray-600 p-2 rounded-xl absolute left-1/2 -top-6 -translate-x-1/2;
+		> svg {
+			@apply text-white w-8 h-8;
+		}
+	}
+
+	> h6 {
+		@apply text-gray-800;
+	}
+
+	> p {
+		@apply mb-4;
+	}
+
+	@media (max-width: 700px) {
+		@apply hidden;
+	}
+}

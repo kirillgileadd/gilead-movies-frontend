@@ -1,5 +1,5 @@
 .navigation {
-	@apply py-layout flex flex-col;
+	@apply block bg-gray-100 flex mt-4 flex-col opacity-100 transition-all z-2;
 	&::-webkit-scrollbar {
 		width: 5px;
 	}
@@ -21,22 +21,8 @@
 	> div > a {
 		@apply mb-8;
 	}
+}
 
-	.random__movie {
-		@apply relative flex text-center flex-col justify-center items-center mx-layout mt-auto bg-gray-200 p-4 pt-8 rounded-3xl;
-		> div {
-			@apply bg-gray-600 p-2 rounded-xl absolute left-1/2 -top-6 -translate-x-1/2;
-			> svg {
-				@apply text-white w-8 h-8;
-			}
-		}
-
-		> h6 {
-			@apply text-gray-800;
-		}
-
-		> p {
-			@apply mb-4;
-		}
-	}
+.navigation.hidden {
+	@apply -translate-y-24 opacity-0;
 }

@@ -1,5 +1,5 @@
 .header {
-	@apply flex gap-3 mb-layout items-center;
+	@apply w-full flex gap-3 z-3 pt-6 items-center;
 	> div:first-child {
 		> svg {
 			@apply w-6 h-6;

@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import { FC, memo } from 'react'
 import { useQuery } from 'react-query'
 
-import styles from '@/components/layout/Navigation/Navigation.module.scss'
+import styles from '@/components/RandomMovie/RandomMovie.module.scss'
 
 import MaterialIcon from '@/ui/MaterialIcon'
 
@@ -10,7 +10,7 @@ import MovieService from '@/services/MovieService'
 
 import { getMovieUrl } from '@/configs/api.config'
 
-import { IMovie } from '../../../../types/movie.types'
+import { IMovie } from '../../types/movie.types'
 
 
 const RandomMovie: FC = () => {

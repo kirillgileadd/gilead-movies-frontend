@@ -1,6 +1,10 @@
 .inner {
-	@apply mt-6 mx-auto p-24 bg-gray-200 rounded-3xl;
+	@apply flex items-center justify-center  mt-6 mx-auto p-24 bg-gray-200 rounded-3xl;
 	> p {
-		@apply mx-auto text-center text-5xl text-gray-800 font-extrabold;
+		@apply text-center text-5xl text-gray-600 font-extrabold;
+	}
+
+	> svg {
+		@apply w-24 h-24;
 	}
 }

@@ -1,10 +1,14 @@
 .movies_wrapper {
+	@apply mb-6;
 	.list {
 		@apply flex gap-6 w-1/2;
 	}
 
 	.item {
-		@apply flex flex-col-reverse rounded-xl overflow-hidden relative block w-48 h-64;
+		@apply flex flex-col-reverse rounded-xl overflow-hidden relative block w-full grow;
+		> a > span > img {
+			@apply w-48 h-64 object-cover object-center object-center;
+		}
 	}
 
 	.item_content {
@@ -31,5 +35,5 @@
 }
 
 .movies_block {
-	@apply flex gap-8 w-full items-start;
+	@apply flex gap-8 w-full;
 }

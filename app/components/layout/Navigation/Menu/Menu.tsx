@@ -15,10 +15,11 @@ const Menu: FC<{ menu: IMenu }> = ({ menu }) => {
 
 	return (
 		<div className={styles.menu}>
-			<h6 className="pl-layout">{menu.title}</h6>
 			<div className={styles.lists}>
-				<ul>{menuItems}</ul>
-				{menu.title === 'Общее' && <NoSSRAuthItems />}
+				<ul>
+					{menuItems}
+					<NoSSRAuthItems />
+				</ul>
 			</div>
 		</div>
 	)

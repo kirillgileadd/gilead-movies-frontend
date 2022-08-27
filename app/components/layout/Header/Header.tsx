@@ -1,7 +1,6 @@
 import IconsMenu from '@/components/layout/Header/IconsMenu/IconsMenu'
 import Search from '@/components/layout/Header/Search/Search'
-
-import NavigationButtons from '@/ui/Button/NavigationButtons'
+import Logo from '@/components/layout/Navigation/Logo'
 
 import styles from './Header.module.scss'
 
@@ -9,7 +8,7 @@ import styles from './Header.module.scss'
 const Header = () => {
 	return (
 		<div className={styles.header}>
-			<NavigationButtons />
+			<Logo />
 			<Search />
 			<IconsMenu />
 		</div>

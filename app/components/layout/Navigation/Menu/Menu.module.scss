@@ -1,15 +1,12 @@
 .menu {
-	@apply mb-6;
-	> h6 {
-		@apply text-gray-500 mb-3 text-xs uppercase font-bold;
-	}
-
 	.lists {
+		@apply overflow-x-auto;
 		> ul {
+			@apply flex;
 			> li {
-				@apply pl-layout mr-12 rounded-r-3xl py-3 relative after:content-[''] after:ml-0.5 after:absolute after:-left-0.5 after:top-0 after:h-full after:w-1 after:rounded-md;
+				@apply whitespace-nowrap pl-layout p-2 py-3 rounded-r-3xl relative after:content-[''] after:ml-0.5 after:absolute after:-left-0.5 after:bottom-0 after:h-1 after:w-full after:rounded-md;
 				> a {
-					@apply flex items-center;
+					@apply mr-7 flex items-center;
 					> p {
 						@apply text-gray-500 ml-3;
 					}
@@ -20,7 +17,7 @@
 				}
 
 				&.active {
-					@apply after:bg-primary bg-white;
+					@apply after:bg-primary;
 					> a > p {
 						@apply text-gray-800;
 					}

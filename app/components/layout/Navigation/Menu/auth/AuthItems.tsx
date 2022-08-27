@@ -9,7 +9,7 @@ import { useTypedSelector } from '@/hooks/useTypedSelector'
 const AuthItems: FC = () => {
 	const { user } = useTypedSelector((state) => state.user)
 	return (
-		<ul>
+		<>
 			{user ? (
 				<>
 					<MenuItem
@@ -29,7 +29,7 @@ const AuthItems: FC = () => {
 					title={'Панель Администратора'}
 				/>
 			)}
-		</ul>
+		</>
 	)
 }
 

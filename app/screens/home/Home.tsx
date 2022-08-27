@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import { FC } from 'react'
 
+import RandomMovie from '@/components/RandomMovie/RandomMovie'
+
 import testImage from '@/assets/img/witcher.jpg'
 
 import { Meta } from '@/utils/meta/Meta'
@@ -28,7 +30,7 @@ const Home: FC<IHome> = () => {
 						src={testImage}
 					/>
 				</div>
-
+				<RandomMovie />
 				<Genres />
 			</div>
 		</Meta>

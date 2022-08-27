@@ -143,6 +143,12 @@ module.exports = {
 						objectFit: 'cover',
 						pointerEvents: 'none',
 					},
+					'.main-container': {
+						position: 'relative',
+						margin: '0 auto',
+						maxWidth: '1250px',
+						padding: '0 15px',
+					},
 				})
 		}),
 	],

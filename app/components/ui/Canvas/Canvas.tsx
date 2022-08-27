@@ -39,7 +39,7 @@ const Canvas: FC<{ movies: IMovie[] }> = ({ movies }) => {
 
 	return (
 		<div className={styles.canvas}>
-			<Bar options={options} data={data} />;
+			<Bar options={options} data={data} />
 		</div>
 	)
 }
