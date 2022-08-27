@@ -1,5 +1,5 @@
 .navigation {
-	@apply block bg-gray-100 flex mt-4 flex-col opacity-100 transition-all z-2;
+	@apply block bg-gray-100 flex pt-4 pb-2 flex-col opacity-100 transition-all z-2;
 	&::-webkit-scrollbar {
 		width: 5px;
 	}

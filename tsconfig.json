@@ -32,6 +32,9 @@
       "@/shared/*": [
         "shared/*"
       ],
+      "@/types/*": [
+        "types/*"
+      ],
       "@/hooks/*": [
         "hooks/*"
       ],

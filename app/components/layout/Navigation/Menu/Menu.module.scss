@@ -4,9 +4,9 @@
 		> ul {
 			@apply flex;
 			> li {
-				@apply whitespace-nowrap pl-layout p-2 py-3 rounded-r-3xl relative after:content-[''] after:ml-0.5 after:absolute after:-left-0.5 after:bottom-0 after:h-1 after:w-full after:rounded-md;
+				@apply whitespace-nowrap px-4 py-3 rounded-r-3xl relative after:content-[''] after:ml-0.5 after:absolute after:-left-0.5 after:bottom-0 after:h-1 after:w-full after:rounded-md;
 				> a {
-					@apply mr-7 flex items-center;
+					@apply flex items-center;
 					> p {
 						@apply text-gray-500 ml-3;
 					}

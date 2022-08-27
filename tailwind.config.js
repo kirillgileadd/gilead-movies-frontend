@@ -136,7 +136,7 @@ module.exports = {
 					'.flex-center': {
 						display: 'flex',
 						alignItems: 'center',
-						justifyContent: 'space-between',
+						justifyContent: 'center',
 					},
 					'.image-like-bg': {
 						objectPosition: 'center',

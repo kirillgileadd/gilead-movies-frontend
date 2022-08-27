@@ -16,7 +16,6 @@ const GenresItem: FC<IGenreItem> = ({ name, icon, description, slug }) => {
 					<a>
 						<MaterialIcon icon={icon} />
 						<h6>{name}</h6>
-						<p>{description}</p>
 					</a>
 				</Link>
 			</div>
