@@ -1,17 +1,20 @@
 import IconsMenu from '@/components/layout/Header/IconsMenu/IconsMenu'
 import Search from '@/components/layout/Header/Search/Search'
+import Logo from '@/components/layout/Navigation/Logo'
 
-import NavigationButtons from '@/ui/Button/NavigationButtons'
+import { useAuth } from '@/hooks/useAuth'
 
 import styles from './Header.module.scss'
 
 
 const Header = () => {
+	const { user } = useAuth()
+
 	return (
 		<div className={styles.header}>
-			<NavigationButtons />
+			<Logo color={'white'} />
 			<Search />
-			<IconsMenu />
+			<IconsMenu user={user} />
 		</div>
 	)
 }

@@ -25,9 +25,10 @@ const instance = axios.create({
 
 instance.interceptors.request.use((config) => {
 	const accessToken = Cookies.get('accessToken')
-	if (config.headers && accessToken) {
+	if (config.headers && accessToken)
 		config.headers.Authorization = `Bearer ${accessToken}`
-	}
+
+	return config
 })
 
 instance.interceptors.response.use(
@@ -55,3 +56,5 @@ instance.interceptors.response.use(
 		throw error
 	}
 )
+
+export default instance

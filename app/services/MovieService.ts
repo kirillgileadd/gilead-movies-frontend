@@ -17,4 +17,8 @@ export default class MovieService {
 	static async getRandomMovie() {
 		return await $api.get<IMovie>(getMoviesUrl('/random'))
 	}
+
+	static async getPopularMovies() {
+		return await $api.get<IMovie[]>(getMoviesUrl('/most-popular'))
+	}
 }

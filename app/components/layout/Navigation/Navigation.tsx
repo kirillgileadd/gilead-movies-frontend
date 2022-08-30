@@ -1,25 +1,19 @@
+import cl from 'classnames'
 import { memo } from 'react'
 
-import Logo from '@/components/layout/Navigation/Logo'
 import Menu from '@/components/layout/Navigation/Menu/Menu'
-import {
-	authMenu,
-	menuData,
-} from '@/components/layout/Navigation/Menu/menu.data'
-import RandomMovie from '@/components/layout/Navigation/RandomMovie/RandomMovie'
+import { menuData } from '@/components/layout/Navigation/Menu/menu.data'
+
+import { useSticky } from '@/hooks/useSticky'
 
 import styles from './Navigation.module.scss'
 
 
 const Navigation = () => {
+	const [menuHidden] = useSticky()
 	return (
-		<div className={styles.navigation}>
-			<div className="ml-layout">
-				<Logo />
-			</div>
+		<div className={cl({ [styles.hidden]: menuHidden }, styles.navigation)}>
 			<Menu menu={menuData} />
-			<Menu menu={authMenu} />
-			<RandomMovie />
 		</div>
 	)
 }

@@ -1,0 +1,39 @@
+.movies_wrapper {
+	@apply mb-6;
+	.list {
+		@apply flex gap-6 w-1/2;
+	}
+
+	.item {
+		@apply flex flex-col-reverse rounded-xl overflow-hidden relative block w-full grow;
+		> a > span > img {
+			@apply w-48 h-64 object-cover object-center object-center;
+		}
+	}
+
+	.item_content {
+		@apply mt-auto backdrop-blur-xl px-2 py-2;
+
+		> h6 {
+			@apply mb-1 text-2md text-gray-200;
+		}
+	}
+}
+
+.rating {
+	@apply flex;
+	> svg {
+		@apply text-yellow-700;
+	}
+}
+
+.watch_count {
+	@apply flex text-gray-200;
+	> p {
+		@apply ml-2;
+	}
+}
+
+.movies_block {
+	@apply flex gap-8 w-full;
+}

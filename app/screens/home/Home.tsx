@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import { FC } from 'react'
 
+import RandomMovie from '@/components/RandomMovie/RandomMovie'
+
 import testImage from '@/assets/img/witcher.jpg'
 
 import { Meta } from '@/utils/meta/Meta'
@@ -14,21 +16,20 @@ import { IHome } from './home.interface'
 const Home: FC<IHome> = () => {
 	return (
 		<Meta
-			title="Watch movies online"
-			description="MovieApp watch movies free online goblin"
+			title='Watch movies online'
+			description='MovieApp watch movies free online goblin'
 		>
 			<div className={styles.main}>
-				<div className="mb-6">
+				<div className={styles.main_image}>
 					<Image
 						draggable={false}
 						height={600}
-						objectFit="cover"
-						className="rounded-3xl"
-						objectPosition="center"
+						objectFit='cover'
+						objectPosition='center'
 						src={testImage}
 					/>
 				</div>
-
+				<RandomMovie />
 				<Genres />
 			</div>
 		</Meta>

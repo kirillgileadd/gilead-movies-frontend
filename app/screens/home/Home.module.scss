@@ -1,3 +1,7 @@
 .main {
   margin-bottom: 300px;
 }
+
+.main_image {
+  @apply rounded-image overflow-hidden mb-6;
+}
