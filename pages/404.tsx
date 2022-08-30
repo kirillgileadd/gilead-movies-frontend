@@ -13,16 +13,16 @@ import styles from '../styles/404.module.scss'
 
 const Error404 = () => {
 	return (
-		<Meta title="Page not found">
+		<Meta title='Page not found'>
 			<main className={styles.main}>
-				<Image className={styles.background} src={background} layout="fill" />
+				<Image className={styles.background} src={background} layout='fill' />
 				<div className={styles.content}>
-					<div className="absolute left-layout top-layout">
+					<div className='absolute left-layout top-layout'>
 						<Logo color={'white'} />
 					</div>
-					<h3 className="text-title">404 Page Not Found</h3>
-					<Link href="/">
-						<a className="btn-primary">Back to Home</a>
+					<h3 className='text-title'>404 Page Not Found</h3>
+					<Link href='/'>
+						<a className='btn-primary'>Вернуться на главную</a>
 					</Link>
 				</div>
 			</main>

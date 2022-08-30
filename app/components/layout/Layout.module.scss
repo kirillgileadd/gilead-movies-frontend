@@ -1,17 +1,17 @@
 $navigationSize: 22%;
 
 .layout {
-	@apply relative;
+  @apply relative;
 
-	.main {
-		@apply relative mt-44;
-	}
+  .main {
+    @apply relative mt-44;
+  }
 
-	.container {
-		@apply mx-auto max-w-screen-xl relative;
-	}
+  .container {
+    @apply mx-auto max-w-screen-xl relative;
+  }
 
-	.top_layout {
-		@apply fixed left-0 top-0 right-0 z-3 bg-gray-100 h-20;
-	}
+  .top_layout {
+    @apply fixed left-0 top-0 right-0 z-3;
+  }
 }

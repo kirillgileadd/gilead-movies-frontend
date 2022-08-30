@@ -12,7 +12,7 @@ const Header = () => {
 
 	return (
 		<div className={styles.header}>
-			<Logo />
+			<Logo color={'white'} />
 			<Search />
 			<IconsMenu user={user} />
 		</div>

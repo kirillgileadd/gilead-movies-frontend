@@ -1,21 +1,31 @@
+.random__movie_box {
+  @apply fixed flex left-10 bottom-10 z-3;
+  .random__movie_preview {
+    @apply p-4 bg-gray-800 cursor-pointer rounded-full shadow-lg;
+    > svg {
+      @apply w-8 h-8 text-white;
+    }
+  }
+}
+
 .random__movie {
-	@apply fixed flex left-0 bottom-6 z-3 text-center flex-col justify-center items-center mx-layout mt-auto bg-gray-200 p-4 pt-8 rounded-3xl;
-	> div {
-		@apply bg-gray-600 p-2 rounded-xl absolute left-1/2 -top-6 -translate-x-1/2;
-		> svg {
-			@apply text-white w-8 h-8;
-		}
-	}
+  @apply animate-fade text-center flex-col justify-center items-center mt-auto bg-gray-800 p-4 pt-8 rounded-3xl;
+  > div {
+    @apply bg-gray-800 p-2 rounded-xl absolute left-1/2 -top-6 -translate-x-1/2;
+    > svg {
+      @apply text-white w-8 h-8;
+    }
+  }
 
-	> h6 {
-		@apply text-gray-800;
-	}
+  > h6 {
+    @apply text-white;
+  }
 
-	> p {
-		@apply mb-4;
-	}
+  > p {
+    @apply mb-4;
+  }
 
-	@media (max-width: 700px) {
-		@apply hidden;
-	}
+  @media (max-width: 700px) {
+    @apply hidden;
+  }
 }

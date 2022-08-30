@@ -16,17 +16,16 @@ import { IHome } from './home.interface'
 const Home: FC<IHome> = () => {
 	return (
 		<Meta
-			title="Watch movies online"
-			description="MovieApp watch movies free online goblin"
+			title='Watch movies online'
+			description='MovieApp watch movies free online goblin'
 		>
 			<div className={styles.main}>
-				<div className="mb-6">
+				<div className={styles.main_image}>
 					<Image
 						draggable={false}
 						height={600}
-						objectFit="cover"
-						className="rounded-3xl"
-						objectPosition="center"
+						objectFit='cover'
+						objectPosition='center'
 						src={testImage}
 					/>
 				</div>

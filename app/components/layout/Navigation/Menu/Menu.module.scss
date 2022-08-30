@@ -1,32 +1,32 @@
 .menu {
-	.lists {
-		@apply overflow-x-auto;
-		> ul {
-			@apply flex;
-			> li {
-				@apply whitespace-nowrap px-4 py-3 rounded-r-3xl relative after:content-[''] after:ml-0.5 after:absolute after:-left-0.5 after:bottom-0 after:h-1 after:w-full after:rounded-md;
-				> a {
-					@apply flex items-center;
-					> p {
-						@apply text-gray-500 ml-3;
-					}
+  .lists {
+    @apply overflow-x-auto;
+    > ul {
+      @apply flex;
+      > li {
+        @apply whitespace-nowrap px-4 py-3 rounded-r-3xl relative after:content-[''] after:ml-0.5 after:absolute after:-left-0.5 after:bottom-0 after:h-1 after:w-full after:rounded-md;
+        > a {
+          @apply flex items-center;
+          > p {
+            @apply text-gray-500 ml-3;
+          }
 
-					> svg {
-						@apply fill-gray-500 w-5 h-5;
-					}
-				}
+          > svg {
+            @apply fill-gray-500 w-5 h-5;
+          }
+        }
 
-				&.active {
-					@apply after:bg-primary;
-					> a > p {
-						@apply text-gray-800;
-					}
+        &.active {
+          @apply after:bg-primary;
+          > a > p {
+            @apply text-white;
+          }
 
-					> a > svg {
-						@apply fill-gray-800;
-					}
-				}
-			}
-		}
-	}
+          > a > svg {
+            @apply fill-white;
+          }
+        }
+      }
+    }
+  }
 }

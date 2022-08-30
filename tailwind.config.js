@@ -14,13 +14,12 @@ module.exports = {
 			black: colors.black,
 			white: colors.white,
 			gray: {
-				100: '#F9FAFF',
-				200: '#EEEEF9',
-				300: '#d9dae8',
-				500: '#A2ABBA',
-				600: '#829BB1',
-				700: '#677C8D',
-				800: '#3E4B54',
+				100: '#222328',
+				200: '#1E1F24',
+				500: '#6D6D77',
+				600: '#2F3035',
+				700: '#141519',
+				800: '#141519',
 			},
 			transparent: colors.transparent,
 			yellow: {
@@ -85,13 +84,13 @@ module.exports = {
 		plugin(({ addComponents, theme, addUtilities }) => {
 			addComponents({
 				'.btn-primary': {
-					backgroundColor: theme('colors.gray.600'),
+					backgroundColor: theme('colors.gray.500'),
 					color: '#fff',
 					borderRadius: '0.65rem',
 					padding: '8px 15px',
 					transition: 'background-color .3s ease-in-out',
 					'&:hover': {
-						backgroundColor: theme('colors.gray.700'),
+						backgroundColor: theme('colors.gray.600'),
 					},
 				},
 
@@ -113,7 +112,7 @@ module.exports = {
 					boxShadow: theme('boxShadow.lg'),
 				},
 				'.text-title': {
-					color: theme('colors.gray.800'),
+					color: theme('colors.white'),
 					fontSize: '1.5rem',
 					fontWeight: 500,
 				},

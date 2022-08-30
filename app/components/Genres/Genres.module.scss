@@ -1,37 +1,41 @@
 .genre__list {
-	@apply flex flex-row gap-x-6 items-start;
-	> li {
-		@apply relative basis-1/4;
-	}
+  @apply flex flex-row gap-x-6 items-start;
+  > li {
+    @apply relative basis-1/4;
+  }
 
-	.genre__item {
-		@apply basis-1/4 bg-gray-200 p-4 rounded-2xl transition-transform;
+  .genre__item {
+    @apply basis-1/4 bg-gray-200 p-4 rounded-2xl transition-transform;
 
-		> a {
-			@apply flex flex-col justify-center items-center;
-		}
+    > a {
+      @apply flex flex-col justify-center items-center;
+    }
 
-		> a > h6 {
-			@apply text-gray-800;
-		}
+    > a > h6 {
+      @apply text-gray-500;
+    }
 
-		> a > svg {
-			@apply w-12 h-12 mb-6;
-		}
+    > a > svg {
+      @apply w-12 h-12 mb-6;
+    }
 
-		> a > p {
-			@apply hidden opacity-0 text-gray-600 text-center;
-		}
+    > a > p {
+      @apply hidden opacity-0 text-gray-600 text-center;
+    }
 
-		&:hover {
-			@apply bg-white shadow-2xl absolute scale-105 w-full;
-			> a > svg {
-				@apply fill-primary;
-			}
+    &:hover {
+      @apply bg-gray-600 shadow-2xl absolute scale-105 w-full;
+      > a > svg {
+        @apply fill-primary;
+      }
 
-			> a > p {
-				@apply block transition-all opacity-100;
-			}
-		}
-	}
+      > a > h6 {
+        @apply text-white;
+      }
+
+      > a > p {
+        @apply block transition-all  opacity-100;
+      }
+    }
+  }
 }
