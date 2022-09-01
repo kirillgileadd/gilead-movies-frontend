@@ -1,11 +1,11 @@
 import { Dispatch, ReactNode, SetStateAction } from 'react'
 
-import { TypeMaterialIcons } from '@/types/itcon.types'
+import { IconsType } from '@/types/itcon.types'
 
 export interface IDropMenuItem {
 	link: string
 	name: string
-	icon: TypeMaterialIcons
+	icon: IconsType
 }
 
 export interface IDropdownMenu {

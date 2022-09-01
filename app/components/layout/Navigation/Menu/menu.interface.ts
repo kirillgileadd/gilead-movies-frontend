@@ -1,7 +1,7 @@
-import { TypeMaterialIcons } from '@/types/itcon.types'
+import { IconsType } from '@/types/itcon.types'
 
 export interface IMenuItem {
-	icon: TypeMaterialIcons
+	icon: IconsType
 	title: string
 	href: string
 }
