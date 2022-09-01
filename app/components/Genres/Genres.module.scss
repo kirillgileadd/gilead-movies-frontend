@@ -1,11 +1,11 @@
 .genre__list {
   @apply flex flex-row gap-x-6 items-start;
   > li {
-    @apply relative basis-1/4;
+    @apply relative basis-1/5;
   }
 
   .genre__item {
-    @apply basis-1/4 bg-gray-200 p-4 rounded-2xl transition-transform;
+    @apply basis-1/4 bg-gray-200 p-4 rounded-xl transition-transform;
 
     > a {
       @apply flex flex-col justify-center items-center;
