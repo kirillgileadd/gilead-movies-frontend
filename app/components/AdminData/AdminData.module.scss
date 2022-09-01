@@ -1,0 +1,17 @@
+.data_block {
+  @apply absolute left-0 top-0;
+
+  > h3 {
+    @apply text-title mb-4;
+  }
+
+  .item {
+    > h6 {
+      @apply uppercase text-sm font-bold;
+    }
+
+    > p {
+      @apply text-white mb-4;
+    }
+  }
+}

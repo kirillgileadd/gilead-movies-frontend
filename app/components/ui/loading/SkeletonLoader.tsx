@@ -12,7 +12,7 @@ const SkeletonLoader: FC<SkeletonPropsWithChildren> = ({
 																												 ...rest
 																											 }) => {
 	return (
-		<SkeletonTheme baseColor='#141519' highlightColor='#fff'>
+		<SkeletonTheme baseColor='#141519' highlightColor='#2F3035'>
 			<Skeleton {...rest} className={cl('rounded-3xl', className)} />
 		</SkeletonTheme>
 	)
