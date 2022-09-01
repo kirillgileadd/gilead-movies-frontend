@@ -14,24 +14,24 @@ const Genres: FC = () => {
 	const genresItem = useMemo(
 		() =>
 			data && data.map((genre) => <GenresItem key={genre._id} {...genre} />),
-		[isFetched]
+		[isFetched],
 	)
 
 	return (
 		<div>
 			{isLoading ? (
 				<div>
-					<SkeletonLoader className="h-6 mb-6 w-12" width={80} />
+					<SkeletonLoader className='h-6 mb-6 w-12' width={80} />
 					<SkeletonLoader
 						width={'20%'}
 						count={4}
 						inline
-						className="h-32 w-1/5 mr-6"
+						className='h-32 w-1/5 mr-6 rounded-xl'
 					/>
 				</div>
 			) : (
 				<>
-					<h3 className="text-title mb-6">Жанры</h3>
+					<h3 className='text-title mb-6'>Жанры</h3>
 					<ul className={styles.genre__list}>{genresItem}</ul>
 				</>
 			)}

@@ -4,15 +4,18 @@ import AdminNavBar from '@/components/AdminNavBar/AdminNavBar'
 import Layout from '@/components/layout/Layout'
 
 import UsersList from '../../../app/screens/admin/UsersList'
-import { NextPageAuth } from '../../../app/types/auth.types'
+import { NextPageAuth } from '@/types/auth.types'
+import { Meta } from '@/utils/meta/Meta'
 
 
 const AdminUsersList: NextPageAuth = () => {
 	return (
-		<Layout>
-			<AdminNavBar />
-			<UsersList />
-		</Layout>
+		<Meta title='Пользователи'>
+			<Layout>
+				<AdminNavBar />
+				<UsersList />
+			</Layout>
+		</Meta>
 	)
 }
 

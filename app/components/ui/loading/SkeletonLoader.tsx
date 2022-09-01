@@ -8,11 +8,11 @@ interface SkeletonPropsWithChildren extends SkeletonProps {
 }
 
 const SkeletonLoader: FC<SkeletonPropsWithChildren> = ({
-	className,
-	...rest
-}) => {
+																												 className,
+																												 ...rest
+																											 }) => {
 	return (
-		<SkeletonTheme baseColor="#EEEEF9" highlightColor="#F9FAFF">
+		<SkeletonTheme baseColor='#141519' highlightColor='#fff'>
 			<Skeleton {...rest} className={cl('rounded-3xl', className)} />
 		</SkeletonTheme>
 	)
