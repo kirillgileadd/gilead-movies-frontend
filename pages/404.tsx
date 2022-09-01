@@ -20,7 +20,7 @@ const Error404 = () => {
 					<div className='absolute left-layout top-layout'>
 						<Logo color={'white'} />
 					</div>
-					<h3 className='text-title'>404 Page Not Found</h3>
+					<h3 className='text-title'>404 Страница не найдена</h3>
 					<Link href='/'>
 						<a className='btn-primary'>Вернуться на главную</a>
 					</Link>

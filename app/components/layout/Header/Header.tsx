@@ -1,4 +1,4 @@
-import IconsMenu from '@/components/layout/Header/IconsMenu/IconsMenu'
+import { IconsMenu } from '@/components/layout/Header/IconsMenu'
 import Search from '@/components/layout/Header/Search/Search'
 import Logo from '@/components/layout/Navigation/Logo'
 

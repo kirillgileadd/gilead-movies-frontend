@@ -18,7 +18,7 @@ const Genres: FC = () => {
 	)
 
 	return (
-		<div>
+		<div className='mb-6'>
 			{isLoading ? (
 				<div>
 					<SkeletonLoader className='h-6 mb-6 w-12' width={80} />

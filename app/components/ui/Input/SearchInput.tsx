@@ -21,7 +21,7 @@ const SearchInput: FC<SearchInputProps> = forwardRef(
 				<input
 					ref={ref}
 					className={styles.input__value}
-					placeholder='Поиск. Например: Reservoir dogs'
+					placeholder='Поиск'
 					value={value}
 					onChange={onChange}
 					type='text'

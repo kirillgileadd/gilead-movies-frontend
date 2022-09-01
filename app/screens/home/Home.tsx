@@ -11,13 +11,15 @@ import Genres from '../../components/Genres/Genres'
 
 import styles from './Home.module.scss'
 import { IHome } from './home.interface'
+import MovieCollection from '@/components/MovieCollection/MovieCollection'
+import MovieService from '@/services/MovieService'
 
 
 const Home: FC<IHome> = () => {
 	return (
 		<Meta
-			title='Watch movies online'
-			description='MovieApp watch movies free online goblin'
+			title='Смотреть фильмы онлайн'
+			description='Смотреть фильмы онлайн бесплано'
 		>
 			<div className={styles.main}>
 				<div className={styles.main_image}>
@@ -31,6 +33,7 @@ const Home: FC<IHome> = () => {
 				</div>
 				<RandomMovie />
 				<Genres />
+				<MovieCollection title={'Популярные фильмы'} filterFunc={MovieService.getPopularMovies} />
 			</div>
 		</Meta>
 	)
