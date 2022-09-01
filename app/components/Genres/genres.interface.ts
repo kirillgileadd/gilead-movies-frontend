@@ -1,4 +1,4 @@
-import { TypeMaterialIcons } from '../../types/itcon.types'
+import { IconsType } from '@/types/itcon.types'
 
 export interface IGenre {
 	title: string
@@ -8,7 +8,7 @@ export interface IGenre {
 export interface IGenreItem {
 	_id: string
 	name: string
-	icon: TypeMaterialIcons
+	icon: IconsType
 	slug: string
 	description: string
 	createdAt: string
@@ -17,7 +17,7 @@ export interface IGenreItem {
 export interface IFetchGenreItem {
 	_id: string
 	name: string
-	icon: TypeMaterialIcons
+	icon: IconsType
 	slug: string
 	description: string
 	createdAt: string
