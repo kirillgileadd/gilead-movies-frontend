@@ -6,4 +6,5 @@ export default class AdminService {
 	static async getUsers() {
 		return await axios.get(getUsersUrl('/count'))
 	}
+
 }

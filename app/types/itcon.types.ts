@@ -1,5 +1,4 @@
+import * as BiIcons from 'react-icons/bi'
 import * as MaterialIcons from 'react-icons/md'
-import * as BoxIcons from 'react-icons/bi'
 
-export type IconsType = keyof typeof MaterialIcons | keyof typeof BoxIcons
-
+export type IconsType = keyof typeof MaterialIcons | keyof typeof BiIcons

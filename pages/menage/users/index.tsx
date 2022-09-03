@@ -3,7 +3,7 @@ import React from 'react'
 import AdminNavBar from '@/components/AdminNavBar/AdminNavBar'
 import Layout from '@/components/layout/Layout'
 
-import UsersList from '../../../app/screens/admin/UsersList'
+import UsersList from '../../../app/screens/admin/users/UsersList'
 import { NextPageAuth } from '@/types/auth.types'
 import { Meta } from '@/utils/meta/Meta'
 

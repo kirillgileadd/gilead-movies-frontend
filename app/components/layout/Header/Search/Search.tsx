@@ -1,13 +1,5 @@
 import cl from 'classnames'
-import {
-	ChangeEvent,
-	FC,
-	memo,
-	useCallback,
-	useEffect,
-	useRef,
-	useState,
-} from 'react'
+import { ChangeEvent, FC, memo, useCallback, useEffect, useRef, useState } from 'react'
 
 import GenreSearchList from '@/components/layout/Header/Search/GenreSearchList'
 import MoviesSearchList from '@/components/layout/Header/Search/MoviesSearchList'
@@ -52,6 +44,7 @@ const Search: FC = () => {
 			ref={searchInnerRef}
 		>
 			<SearchInput
+				fullwidth
 				ref={searchInputRef}
 				value={searchTerm}
 				onChange={handleSearch}

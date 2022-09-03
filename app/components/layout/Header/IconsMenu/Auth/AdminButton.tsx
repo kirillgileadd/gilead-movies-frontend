@@ -7,8 +7,8 @@ import Button from '@/ui/form-components/Button/Button'
 const AdminButton: FC = () => {
 	return (
 		<Link href={'menage'}>
-			<a href="">
-				<Button className="mr-4">Панель Админинистратора</Button>
+			<a>
+				<Button className='mr-4'>Панель Админинистратора</Button>
 			</a>
 		</Link>
 	)

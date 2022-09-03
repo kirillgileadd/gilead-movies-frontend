@@ -3,6 +3,7 @@ import React, { FC, forwardRef, Ref } from 'react'
 import MaterialIcon from '@/ui/MaterialIcon'
 
 import styles from './SearchInput.module.scss'
+import cl from 'classnames'
 
 interface SearchInputProps {
 	value: string
@@ -10,13 +11,14 @@ interface SearchInputProps {
 	ref?: any
 	onBlur?: () => void
 	focus?: boolean
+	fullwidth?: boolean
 }
 
 // eslint-disable-next-line react/display-name
 const SearchInput: FC<SearchInputProps> = forwardRef(
-	({ value, onChange }, ref: Ref<HTMLInputElement>) => {
+	({ value, onChange, fullwidth }, ref: Ref<HTMLInputElement>) => {
 		return (
-			<div className={styles.input}>
+			<div className={cl({ [styles.fullwidth]: fullwidth }, styles.input)}>
 				<MaterialIcon icon='MdSearch' />
 				<input
 					ref={ref}

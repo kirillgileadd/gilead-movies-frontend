@@ -1,0 +1,44 @@
+.table_container {
+  @apply bg-gray-200 p-2 rounded-lg text-white;
+}
+
+.table_head {
+  .table_row {
+    @apply bg-primary mb-2 bg-opacity-50;
+    &:hover {
+      @apply bg-primary bg-opacity-50;
+    }
+
+    &:last-child {
+      @apply mb-2;
+    }
+  }
+}
+
+.table_row {
+  @apply flex items-center justify-center p-4 mb-2 transition-colors rounded-lg;
+  &:hover {
+    @apply bg-gray-600;
+  }
+
+  &:last-child {
+    @apply mb-0;
+  }
+}
+
+.table_cell {
+  @apply basis-1/5;
+  &:last-child {
+    @apply ml-auto text-end;
+  }
+}
+
+.table_actions {
+  @apply flex justify-end gap-2;
+  > svg {
+    @apply w-8 h-8;
+    &:hover {
+      @apply text-primary;
+    }
+  }
+}
