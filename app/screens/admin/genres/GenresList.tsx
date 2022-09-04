@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useState } from 'react'
+import React, { FC } from 'react'
 
 import AdminHeader from '@/components/AdminHeader/AdminHeader'
 
@@ -7,50 +7,45 @@ import TableActions from '@/ui/Table/TableActions'
 import TableBody from '@/ui/Table/TableBody'
 import TableCell from '@/ui/Table/TableCell'
 import TableContainer from '@/ui/Table/TableContainer'
+import TableHead from '@/ui/Table/TableHead'
 import TableRow from '@/ui/Table/TableRow'
 import TableSkeleton from '@/ui/Table/TableSkeleton'
 
-import { IUserFilter } from './UserList.interface'
-import UserTableHeader from './UserTableHeader'
-import { useUsers } from './useUsers'
+import { useGenres } from './useGenres'
 
 
-const UsersList: FC = () => {
-	const [filters, setFilters] = useState<IUserFilter>({
-		isAdmin: false,
-	})
-	const filterHandler = useCallback(
-		() => setFilters((prev) => ({ ...prev, isAdmin: !prev.isAdmin })),
-		[]
-	)
-
-	const { searchTerm, handleSearch, data, deleteUser, isLoading } =
-		useUsers(filters)
-
+const GenresList: FC = () => {
+	const { searchTerm, handleSearch, data, deleteUser, isLoading } = useGenres()
 	return (
 		<div>
 			<AdminHeader
 				searchTerm={searchTerm}
 				handleSearch={handleSearch}
-				title={'Список пользователей'}
+				title={'Список жанров'}
 			/>
 			<TableContainer>
 				<Table>
-					<UserTableHeader filterHandler={filterHandler} />
+					<TableHead>
+						<TableRow>
+							<TableCell>Иконка</TableCell>
+							<TableCell>Название</TableCell>
+							<TableCell>Управление</TableCell>
+						</TableRow>
+					</TableHead>
 					{isLoading ? (
 						<TableSkeleton />
 					) : (
 						<TableBody>
 							{data &&
-								data.map((user) => (
-									<TableRow key={user._id}>
-										{user.items.map((cell) => (
+								data.map((genre) => (
+									<TableRow key={genre._id}>
+										{genre.items.map((cell) => (
 											<TableCell key={cell}>{cell}</TableCell>
 										))}
 										<TableCell>
 											<TableActions
-												editUrl={user.editUrl}
-												onDelete={() => deleteUser(user._id)}
+												editUrl={genre.editUrl}
+												onDelete={() => deleteUser(genre._id)}
 											/>
 										</TableCell>
 									</TableRow>
@@ -63,4 +58,4 @@ const UsersList: FC = () => {
 	)
 }
 
-export default UsersList
+export default GenresList

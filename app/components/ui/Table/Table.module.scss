@@ -35,7 +35,7 @@
 
 .table_actions {
   @apply flex justify-end gap-2;
-  > svg {
+  > button > svg {
     @apply w-8 h-8;
     &:hover {
       @apply text-primary;

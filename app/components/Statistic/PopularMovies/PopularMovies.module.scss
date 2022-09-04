@@ -12,10 +12,10 @@
 	}
 
 	.item_content {
-		@apply mt-auto backdrop-blur-xl px-2 py-2;
+		@apply mt-auto bg-gray-600 bg-opacity-70 backdrop-blur-xl px-2 py-2;
 
 		> h6 {
-			@apply mb-1 text-2md text-gray-200;
+			@apply mb-1 text-2md text-white;
 		}
 	}
 }
@@ -28,7 +28,7 @@
 }
 
 .watch_count {
-	@apply flex text-gray-200;
+	@apply flex text-white;
 	> p {
 		@apply ml-2;
 	}
