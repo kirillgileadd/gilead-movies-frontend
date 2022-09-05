@@ -1,6 +1,6 @@
 import { IMovie } from '@/shared/../types/movie.types'
 
-import { $api } from '@/utils/api/api.interceptors'
+import axios, { $api } from '@/utils/api/api.interceptors'
 
 import { getMoviesUrl } from '@/configs/api.config'
 
@@ -20,5 +20,9 @@ export default class MovieService {
 
 	static async getPopularMovies() {
 		return await $api.get<IMovie[]>(getMoviesUrl('/most-popular'))
+	}
+
+	static async deleteMovie(id: string) {
+		return await axios.delete(getMoviesUrl(`/${id}`))
 	}
 }

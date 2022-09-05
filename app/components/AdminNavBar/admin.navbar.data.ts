@@ -15,7 +15,17 @@ export const adminNavbarData: IAdminNavbarItem[] = [
 	},
 	{
 		id: '3',
+		title: 'Фильмы',
+		href: getAdminUrl('/movies'),
+	},
+	{
+		id: '4',
 		title: 'Жанры',
 		href: getAdminUrl('/genres'),
+	},
+	{
+		id: '5',
+		title: 'Актеры',
+		href: getAdminUrl('/actors'),
 	},
 ]
