@@ -12,7 +12,7 @@ import { NextPageAuth } from '@/types/auth.types'
 
 const AdminActorsList: NextPageAuth = () => {
 	return (
-		<Meta title="Список жанров">
+		<Meta title="Список актеров">
 			<Layout>
 				<AdminNavBar />
 				<ActorsList />
