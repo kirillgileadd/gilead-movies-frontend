@@ -15,7 +15,7 @@ import { useGenres } from './useGenres'
 
 
 const GenresList: FC = () => {
-	const { searchTerm, handleSearch, data, deleteUser, isLoading } = useGenres()
+	const { searchTerm, handleSearch, data, deleteGenre, isLoading } = useGenres()
 	return (
 		<div>
 			<AdminHeader
@@ -45,7 +45,7 @@ const GenresList: FC = () => {
 										<TableCell>
 											<TableActions
 												editUrl={genre.editUrl}
-												onDelete={() => deleteUser(genre._id)}
+												onDelete={() => deleteGenre(genre._id)}
 											/>
 										</TableCell>
 									</TableRow>

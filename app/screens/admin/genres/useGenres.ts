@@ -7,7 +7,6 @@ import { ITableItem } from '@/ui/Table/Table.interface'
 import { useDebounce } from '@/hooks/useDebounce'
 
 import { GenreService } from '@/services/GenreSevice'
-import UserService from '@/services/UserService'
 
 import { toastError } from '@/utils/api/toastr.error'
 
@@ -31,7 +30,7 @@ export const useGenres = () => {
 					(item) =>
 						({
 							_id: item._id,
-							editUrl: getAdminUrl(`genre/edit/${item._id}`),
+							editUrl: getAdminUrl(`/genres/edit/${item._id}`),
 							items: [item.icon, item.name],
 						} as ITableItem)
 				),
@@ -42,15 +41,15 @@ export const useGenres = () => {
 		}
 	)
 
-	const { mutateAsync: deleteUser } = useMutation(
-		'delete user',
-		(id: string) => UserService.deleteUser(id),
+	const { mutateAsync: deleteGenre } = useMutation(
+		'delete genre',
+		(id: string) => GenreService.delete(id),
 		{
 			onError(error) {
-				toastError(error, 'Пользователь не удален!')
+				toastError(error, 'Жанр не удален!')
 			},
 			onSuccess() {
-				toastr.success('Пользователь удален!', 'удаление прошло успешно')
+				toastr.success('Жанр удален!', 'удаление прошло успешно')
 				usersData.refetch()
 			},
 		}
@@ -61,8 +60,8 @@ export const useGenres = () => {
 			handleSearch,
 			...usersData,
 			searchTerm,
-			deleteUser,
+			deleteGenre,
 		}),
-		[searchTerm, usersData, deleteUser, handleSearch]
+		[searchTerm, usersData, deleteGenre, handleSearch]
 	)
 }

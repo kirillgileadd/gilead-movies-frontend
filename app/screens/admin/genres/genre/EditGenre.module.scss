@@ -1,0 +1,12 @@
+.edit_genre {
+	> h3 {
+		@apply mb-4 text-title;
+	}
+}
+
+.edit_form {
+	@apply flex gap-4;
+	> div {
+		@apply basis-1/3;
+	}
+}

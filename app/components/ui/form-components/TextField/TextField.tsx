@@ -3,7 +3,6 @@ import { FC, HTMLAttributes } from 'react'
 
 import styles from './TextField.module.scss'
 
-
 export interface TextFieldProps extends HTMLAttributes<HTMLInputElement> {
 	value: string
 	name: string
