@@ -50,7 +50,7 @@ const EditGenreForm: FC<IEditGenreForm> = ({
 				rules={{
 					required: 'Выберете иконку',
 				}}
-				defaultValue={''}
+				defaultValue={'MdAdd'}
 				render={({ field: { value, onChange, name } }) => (
 					<TextField
 						helperText={errors.icon?.message}
