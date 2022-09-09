@@ -1,28 +1,28 @@
 .navigation {
-  @apply block bg-gray-100 border-t-2 border-gray-600 flex py-2 flex-col opacity-100 transition-all z-1;
-  &::-webkit-scrollbar {
-    width: 5px;
-  }
+	@apply block bg-gray-100 flex py-2 flex-col opacity-100 transition-all z-1;
+	&::-webkit-scrollbar {
+		width: 5px;
+	}
 
-  &::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
+	&::-webkit-scrollbar-track {
+		background: #f1f1f1;
+	}
 
-  /* Handle */
-  &::-webkit-scrollbar-thumb {
-    @apply bg-gray-500;
-  }
+	/* Handle */
+	&::-webkit-scrollbar-thumb {
+		@apply bg-gray-500;
+	}
 
-  /* Handle on hover */
-  &::-webkit-scrollbar-thumb:hover {
-    @apply bg-gray-600;
-  }
+	/* Handle on hover */
+	&::-webkit-scrollbar-thumb:hover {
+		@apply bg-gray-600;
+	}
 
-  > div > a {
-    @apply mb-8;
-  }
+	> div > a {
+		@apply mb-8;
+	}
 }
 
 .navigation.hidden {
-  @apply -translate-y-24 opacity-0 pointer-events-none;
+	@apply -translate-y-24 opacity-0 pointer-events-none;
 }

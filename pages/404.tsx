@@ -10,19 +10,23 @@ import { Meta } from '@/utils/meta/Meta'
 
 import styles from '../styles/404.module.scss'
 
-
 const Error404 = () => {
 	return (
-		<Meta title='Page not found'>
+		<Meta title="Page not found">
 			<main className={styles.main}>
-				<Image className={styles.background} src={background} layout='fill' />
+				<Image
+					className={styles.background}
+					src={background}
+					priority
+					layout="fill"
+				/>
 				<div className={styles.content}>
-					<div className='absolute left-layout top-layout'>
+					<div className="absolute left-layout top-layout">
 						<Logo color={'white'} />
 					</div>
-					<h3 className='text-title'>404 Страница не найдена</h3>
-					<Link href='/'>
-						<a className='btn-primary'>Вернуться на главную</a>
+					<h3 className="text-title">404 Страница не найдена</h3>
+					<Link href="/">
+						<a className="btn-primary">Вернуться на главную</a>
 					</Link>
 				</div>
 			</main>

@@ -1,5 +1,14 @@
 import cl from 'classnames'
-import { ChangeEvent, FC, memo, useCallback, useEffect, useRef, useState } from 'react'
+import {
+	ChangeEvent,
+	FC,
+	forwardRef,
+	memo,
+	useCallback,
+	useEffect,
+	useRef,
+	useState,
+} from 'react'
 
 import GenreSearchList from '@/components/layout/Header/Search/GenreSearchList'
 import MoviesSearchList from '@/components/layout/Header/Search/MoviesSearchList'
@@ -11,60 +20,61 @@ import { useDebounce } from '@/hooks/useDebounce'
 
 import styles from './Search.module.scss'
 
+export interface ISearch {
+	searchHandler: (value: boolean) => void
+}
 
-const Search: FC = () => {
-	const [searchTerm, setSearchTerm] = useState<string>('')
-	const [dropdownVisible, setDropdownVisible] = useState(false)
-	const searchInnerRef = useRef<any>()
-	const searchInputRef = useRef<HTMLInputElement>(null)
-	const debounceTerm = useDebounce(searchTerm, 500)
-	const { searchGenresQuery, searchMoviesQuery, isSuccess } =
-		useSearch(debounceTerm)
+const Search: FC<ISearch> = ({ searchHandler }) => {
+	const {
+		searchGenresQuery,
+		searchMoviesQuery,
+		isSuccess,
+		handleSearch,
+		searchTerm,
+	} = useSearch()
+	const searchBgRef = useRef<HTMLDivElement>(null)
+	const inputRef = useRef<HTMLInputElement>()
 
 	useEffect(() => {
+		inputRef?.current?.focus()
 		document.addEventListener('click', (event: any) => {
 			const path = event.path || (event.composedPath && event.composedPath())
-			if (path.includes(searchInnerRef.current)) {
-				setDropdownVisible(true)
-				searchInputRef.current?.focus()
-			} else {
-				setDropdownVisible(false)
-				setSearchTerm('')
+			if (path.includes(searchBgRef.current)) {
+				searchHandler(false)
 			}
 		})
 	}, [])
 
-	const handleSearch = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-		setSearchTerm(e.target.value)
-	}, [])
-
 	return (
-		<div
-			className={cl({ [styles.grow]: dropdownVisible }, styles.search__block)}
-			ref={searchInnerRef}
-		>
-			<SearchInput
-				fullwidth
-				ref={searchInputRef}
-				value={searchTerm}
-				onChange={handleSearch}
-			/>
-			{isSuccess && searchTerm && (
-				<div className={styles.list__box}>
-					{searchGenresQuery.data!.length === 0 &&
-					searchMoviesQuery.data!.length === 0 ? (
-						<>
-							<p>Ничего не найдено, попробуйте еще раз ;)</p>
-						</>
-					) : (
-						<>
-							<GenreSearchList genres={searchGenresQuery.data || []} />
-							<MoviesSearchList movies={searchMoviesQuery.data || []} />
-						</>
-					)}
-				</div>
-			)}
-		</div>
+		<>
+			<div
+				ref={searchBgRef}
+				className="fixed left-0 right-0 top-0 bottom-0 z-1"
+			></div>
+			<div className={cl(styles.search__block)}>
+				<SearchInput
+					ref={inputRef}
+					fullwidth
+					value={searchTerm}
+					onChange={handleSearch}
+				/>
+				{isSuccess && searchTerm && (
+					<div className={styles.list__box}>
+						{searchGenresQuery.data!.length === 0 &&
+						searchMoviesQuery.data!.length === 0 ? (
+							<>
+								<p>Ничего не найдено, попробуйте еще раз ;)</p>
+							</>
+						) : (
+							<>
+								<GenreSearchList genres={searchGenresQuery.data || []} />
+								<MoviesSearchList movies={searchMoviesQuery.data || []} />
+							</>
+						)}
+					</div>
+				)}
+			</div>
+		</>
 	)
 }
 

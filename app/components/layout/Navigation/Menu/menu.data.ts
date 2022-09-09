@@ -4,11 +4,6 @@ export const menuData: IMenu = {
 	title: 'Меню',
 	items: [
 		{
-			title: 'Главная',
-			icon: 'MdOutlineHomeWork',
-			href: '/',
-		},
-		{
 			title: 'Популярное',
 			icon: 'MdOutlinePoll',
 			href: '/popular',

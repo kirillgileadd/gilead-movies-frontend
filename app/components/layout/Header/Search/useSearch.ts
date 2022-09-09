@@ -1,10 +1,19 @@
+import { ChangeEvent, useCallback, useMemo, useState } from 'react'
 import { useQuery } from 'react-query'
+
+import { useDebounce } from '@/hooks/useDebounce'
 
 import { GenreService } from '@/services/GenreSevice'
 import MovieService from '@/services/MovieService'
 
+export const useSearch = () => {
+	const [searchTerm, setSearchTerm] = useState<string>('')
+	const debounceTerm = useDebounce(searchTerm, 500)
 
-export const useSearch = (debounceTerm: string) => {
+	const handleSearch = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+		setSearchTerm(e.target.value)
+	}, [])
+
 	const searchMoviesQuery = useQuery(
 		['search movies', debounceTerm],
 		() => MovieService.getAllMovies(debounceTerm),
@@ -25,5 +34,14 @@ export const useSearch = (debounceTerm: string) => {
 	)
 	const isSuccess = searchGenresQuery.isSuccess && searchMoviesQuery.isSuccess
 
-	return { searchMoviesQuery, searchGenresQuery, isSuccess }
+	return useMemo(
+		() => ({
+			isSuccess,
+			handleSearch,
+			searchGenresQuery,
+			searchMoviesQuery,
+			searchTerm,
+		}),
+		[searchTerm, isSuccess]
+	)
 }

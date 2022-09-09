@@ -1,15 +1,18 @@
 .header {
-  @apply w-full bg-gray-100 flex gap-3 z-2 py-4 items-center;
-  > div:first-child {
-    > svg {
-      @apply w-6 h-6;
-    }
-  }
+	@apply w-full bg-gray-100 flex gap-3 z-2 py-4 items-center  transition-all;
+	> div:first-child {
+		> svg {
+			@apply w-6 h-6;
+		}
+	}
+	&.menu_hidden {
+		@apply -translate-y-24;
+	}
 }
 
 .icons__menu {
-  @apply ml-auto flex items-center;
-  > a > svg {
-    @apply w-7 h-7 mx-2;
-  }
+	@apply ml-auto flex items-center;
+	> a > svg {
+		@apply w-7 h-7 mx-2;
+	}
 }

@@ -8,11 +8,9 @@ import { useSticky } from '@/hooks/useSticky'
 
 import styles from './Navigation.module.scss'
 
-
 const Navigation = () => {
-	const [menuHidden] = useSticky()
 	return (
-		<div className={cl({ [styles.hidden]: menuHidden }, styles.navigation)}>
+		<div className={styles.navigation}>
 			<Menu menu={menuData} />
 		</div>
 	)

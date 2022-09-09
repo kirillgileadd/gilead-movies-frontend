@@ -1,27 +1,27 @@
 .input {
-  width: 300px;
-  @apply relative basis-1/2 items-center flex rounded-lg border-2 border-gray-500 py-1.5 px-4;
+	width: 300px;
+	@apply grow relative basis-1/2 items-center flex rounded-lg border-2 border-gray-500 py-1.5 px-4;
 
-  > svg {
-    @apply h-6 w-6 fill-gray-500 mr-2;
-  }
+	> svg {
+		@apply h-6 w-6 fill-gray-500 mr-2;
+	}
 
-  > input {
-    @apply bg-transparent outline-0 w-full shadow-none outline-none border-none p-0;
-    &:focus {
-      @apply shadow-none outline-none border-none ring-0;
-    }
+	> input {
+		@apply bg-transparent outline-0 w-full shadow-none outline-none border-none p-0;
+		&:focus {
+			@apply shadow-none outline-none border-none ring-0;
+		}
 
-    &::placeholder {
-      @apply text-gray-500;
-    }
-  }
+		&::placeholder {
+			@apply text-gray-500;
+		}
+	}
 
-  &:focus-within {
-    @apply grow border-primary;
-  }
+	&:focus-within {
+		@apply grow border-primary;
+	}
 
-  &.fullwidth {
-    width: 100%;
-  }
+	&.fullwidth {
+		width: 100%;
+	}
 }
