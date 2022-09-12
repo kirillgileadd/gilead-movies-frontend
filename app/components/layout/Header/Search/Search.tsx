@@ -1,22 +1,11 @@
 import cl from 'classnames'
-import {
-	ChangeEvent,
-	FC,
-	forwardRef,
-	memo,
-	useCallback,
-	useEffect,
-	useRef,
-	useState,
-} from 'react'
+import { FC, memo, useEffect, useRef } from 'react'
 
 import GenreSearchList from '@/components/layout/Header/Search/GenreSearchList'
 import MoviesSearchList from '@/components/layout/Header/Search/MoviesSearchList'
 import { useSearch } from '@/components/layout/Header/Search/useSearch'
 
 import SearchInput from '@/ui/Input/SearchInput'
-
-import { useDebounce } from '@/hooks/useDebounce'
 
 import styles from './Search.module.scss'
 

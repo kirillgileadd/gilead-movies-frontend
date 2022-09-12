@@ -1,5 +1,5 @@
 import cl from 'classnames'
-import { FC, createRef, useEffect, useRef, useState } from 'react'
+import { FC, useState } from 'react'
 
 import { IconsMenu } from '@/components/layout/Header/IconsMenu'
 import Search from '@/components/layout/Header/Search/Search'
@@ -22,7 +22,15 @@ const Header: FC = () => {
 	}
 
 	return (
-		<div className={cl({ [styles.menu_hidden]: menuHidden }, styles.header)}>
+		<div
+			className={cl(
+				{
+					[styles.menu_hidden]: menuHidden,
+					[styles.search_open]: isSearching,
+				},
+				styles.header
+			)}
+		>
 			<Logo color={'white'} />
 			{isSearching ? (
 				<Search searchHandler={searchHandler} />

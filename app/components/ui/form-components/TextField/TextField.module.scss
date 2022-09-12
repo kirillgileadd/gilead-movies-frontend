@@ -1,5 +1,5 @@
 .text_field__box {
-	@apply relative flex flex-col pb-8;
+	@apply relative flex flex-col;
 	> input {
 		@apply bg-gray-800 rounded-xl border p-4;
 		&:focus {
@@ -8,7 +8,7 @@
 	}
 
 	> label {
-		@apply text-gray-500 font-bold uppercase mb-2 text-sm;
+		@apply text-gray-500 ml-1 mb-1 text-sm;
 	}
 
 	> p {

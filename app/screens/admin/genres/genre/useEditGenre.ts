@@ -9,6 +9,8 @@ import { GenreService } from '@/services/GenreSevice'
 
 import { toastError } from '@/utils/api/toastr.error'
 
+import { getAdminUrl } from '@/configs/api.config'
+
 export interface IEditGenreData extends Omit<IGenreItem, '_id'> {}
 
 export const useEditGenre = (setValue: UseFormSetValue<IEditGenreData>) => {
@@ -22,7 +24,6 @@ export const useEditGenre = (setValue: UseFormSetValue<IEditGenreData>) => {
 		['genre by id', genreId],
 		() => GenreService.getOne(genreId),
 		{
-			enabled: !!query.id,
 			onSuccess({ data }) {
 				typedGetKeys(data).forEach((key) => {
 					setValue(key, data[key])
@@ -31,6 +32,7 @@ export const useEditGenre = (setValue: UseFormSetValue<IEditGenreData>) => {
 			onError() {
 				toastError('Жанр не найден!')
 			},
+			enabled: !!query.id,
 		}
 	)
 
@@ -40,7 +42,7 @@ export const useEditGenre = (setValue: UseFormSetValue<IEditGenreData>) => {
 		{
 			onSuccess() {
 				toastr.success('Обновление', 'жанр успешно обновлен')
-				push('genres')
+				push(getAdminUrl('/genres'))
 			},
 		}
 	)

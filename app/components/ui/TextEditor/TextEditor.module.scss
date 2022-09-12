@@ -1,0 +1,15 @@
+.text_editor {
+	@apply w-full grow;
+	grid-column: span 3;
+}
+
+.text_editor_block {
+	@apply p-4 border-gray-500 border rounded-xl bg-gray-800;
+}
+
+.tool_button {
+}
+
+.tool_button_active {
+	color: red;
+}

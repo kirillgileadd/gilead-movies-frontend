@@ -6,18 +6,17 @@ import { ITableActions } from '@/ui/Table/Table.interface'
 
 import styles from './Table.module.scss'
 
-
 const TableActions: FC<ITableActions> = ({ onDelete, editUrl }) => {
 	return (
 		<div className={styles.table_actions}>
 			<Link href={editUrl}>
 				<a>
-					<button>
+					<button className={styles.actions_button}>
 						<MaterialIcon icon={'BiEdit'} />
 					</button>
 				</a>
 			</Link>
-			<button onClick={onDelete}>
+			<button onClick={onDelete} className={styles.actions_button}>
 				<MaterialIcon icon={'BiTaskX'} />
 			</button>
 		</div>

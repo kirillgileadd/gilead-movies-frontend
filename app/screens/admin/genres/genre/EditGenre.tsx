@@ -6,12 +6,12 @@ import EditGenreForm from './EditGenreForm'
 import { IEditGenreData, useEditGenre } from './useEditGenre'
 
 const EditGenre: FC = () => {
-	const { formState, control, setValue, handleSubmit, getValues } =
+	const { formState, control, setValue, handleSubmit, getValues, watch } =
 		useForm<IEditGenreData>({
 			mode: 'onChange',
 		})
 
-	const { isLoading, onSubmit } = useEditGenre(setValue)
+	const { onSubmit } = useEditGenre(setValue)
 	return (
 		<div className={styles.edit_genre}>
 			<h3>Изменение жанра</h3>

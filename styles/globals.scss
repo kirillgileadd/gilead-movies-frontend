@@ -6,25 +6,34 @@
 @tailwind utilities;
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  @apply bg-gray-100 text-gray-500;
-  font-family: 'Open Sans', sans-serif;
-  padding: 0;
-  margin: 0;
+	@apply bg-gray-100 text-gray-500;
+	font-family: 'Open Sans', sans-serif;
+	padding: 0;
+	margin: 0;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 :root {
-  --primaryColor: '#9E00FF';
-  --dark: '$fff';
-  --bakcgroundColor: '#F9FAFF';
+	--primaryColor: '#9E00FF';
+	--dark: '$fff';
+	--bakcgroundColor: '#F9FAFF';
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+.editor :global(.public-DraftEditor-content) {
+	max-height: 200px;
+	overflow: auto;
 }

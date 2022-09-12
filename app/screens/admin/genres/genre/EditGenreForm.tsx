@@ -1,9 +1,8 @@
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import {
 	Control,
 	Controller,
 	FormState,
-	SetFieldValue,
 	SubmitHandler,
 	UseFormGetValues,
 	UseFormHandleSubmit,
@@ -11,10 +10,11 @@ import {
 } from 'react-hook-form'
 
 import SlugField from '@/ui/SlugField/SlugField'
+import TextEditor from '@/ui/TextEditor/TextEditor'
+import Button from '@/ui/form-components/Button/Button'
 import TextField from '@/ui/form-components/TextField/TextField'
 
 import { createSlug } from '@/utils/string/createSlug'
-import { transliterate } from '@/utils/string/transliterating'
 
 import styles from './EditGenre.module.scss'
 import { IEditGenreData } from './useEditGenre'
@@ -39,7 +39,6 @@ const EditGenreForm: FC<IEditGenreForm> = ({
 	const generateSlug = () => {
 		const slug = String(createSlug(getValues('name')))
 		setValue('slug', slug)
-		console.log(getValues('name'))
 	}
 
 	return (
@@ -52,14 +51,16 @@ const EditGenreForm: FC<IEditGenreForm> = ({
 				}}
 				defaultValue={'MdAdd'}
 				render={({ field: { value, onChange, name } }) => (
-					<TextField
-						helperText={errors.icon?.message}
-						type="text"
-						value={value}
-						label={'Название жанра'}
-						onChange={onChange}
-						name={name}
-					/>
+					<div>
+						<TextField
+							helperText={errors.icon?.message}
+							type="text"
+							value={value}
+							label={'Название жанра'}
+							onChange={onChange}
+							name={name}
+						/>
+					</div>
 				)}
 			/>
 			<Controller
@@ -70,14 +71,16 @@ const EditGenreForm: FC<IEditGenreForm> = ({
 				}}
 				defaultValue={''}
 				render={({ field: { value, onChange, name } }) => (
-					<TextField
-						helperText={errors.name?.message}
-						type="text"
-						value={value}
-						label={'Название жанра'}
-						onChange={onChange}
-						name={name}
-					/>
+					<div>
+						<TextField
+							helperText={errors.name?.message}
+							type="text"
+							value={value}
+							label={'Название жанра'}
+							onChange={onChange}
+							name={name}
+						/>
+					</div>
 				)}
 			/>
 			<Controller
@@ -99,6 +102,23 @@ const EditGenreForm: FC<IEditGenreForm> = ({
 					/>
 				)}
 			/>
+			<Controller
+				name="description"
+				control={control}
+				rules={{
+					required: 'Заполните описание',
+				}}
+				render={({ field: { value, onChange, name } }) => (
+					<TextEditor
+						type="text"
+						helperText={errors.description?.message}
+						value={value}
+						onChange={onChange}
+						name={name}
+					/>
+				)}
+			/>
+			<Button className="bg-primary">Обновить</Button>
 		</form>
 	)
 }
